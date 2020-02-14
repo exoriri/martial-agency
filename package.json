@@ -1,0 +1,37 @@
+{
+  "name": "gulp-boilerplate",
+  "version": "1.0.0",
+  "description": "Gulp with initial configs for development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exoriri/gulp-boilerplate.git"
+  },
+  "author": "exoriri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exoriri/gulp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/exoriri/gulp-boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.2.1"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "not IE_Mob 11",
+    "maintained node versions"
+  ],
+  "dependencies": {}
+}

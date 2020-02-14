@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    align-items: center;
+    font-family: 'Nunito-Bold';
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 300;
+    padding-bottom: 20px;
+
+    &__link {
+        color: #000;
+        text-decoration: none;
+        transition: 0.2s;
+
+        &:hover {
+            padding: 0 5px;
+            border-bottom: 1px solid #000;
+        }
+    }
+
+    &__link_mail {
+        margin-right: 20px;
+    }
+}
+
+.title {
+    font-size: 22px;
+}
+
+.letter {
+    color: red;
+}

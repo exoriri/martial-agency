@@ -1,0 +1,43 @@
+.introduce {
+    position: relative;
+
+    &__block {
+        position: absolute;
+        left: 0;
+        background: url('../../images/agenct.jpg') center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-family: 'Nunito-Regular';
+    }
+
+    &__text {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px 0;
+    }
+
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .introduce {
+        &__description {
+            width: 100%;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}
