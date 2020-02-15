@@ -1,0 +1,21 @@
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation-inversed {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes jumping {
+    0% {
+        bottom: -5px;
+    }
+
+    100% {
+        bottom: 5px;
+    }
+}

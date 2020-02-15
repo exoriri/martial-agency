@@ -1,10 +1,12 @@
+@import 'animations.css';
+
 .introduce {
     position: relative;
 
-    &__block {
+    &__bg {
         position: absolute;
         left: 0;
-        background: url('../../images/agenct.jpg') center;
+        background: url('../../images/agenct.jpg') center no-repeat;
         background-size: cover;
         width: 100%;
         height: 100%;
@@ -12,32 +14,115 @@
         font-family: 'Nunito-Regular';
     }
 
-    &__text {
-        flex-direction: column;
+    &__wrapper {
+        padding: 20px;
         background: rgba(0, 0, 0, 0.6);
-        padding: 20px 0;
     }
+}
+
+.text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 18px;
 
     &__description {
+        position: relative;
         display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    &__title {
-        text-align: center;
-        font-size: 25px;
+    &__image {
+        margin-bottom: 10px;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__image_rotate {
+        animation: rotation linear 4s infinite;
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.top-gear {
+    position: absolute;
+    bottom: 40px;
+    right: 70px;
+    margin-bottom: 0;
+    animation: rotation-inversed linear 3s infinite;
+}
+
+.arrow {
+    position: relative;
+    animation: jumping 0.5s linear infinite;
+    animation-direction: alternate;
+}
+
+.bag {
+    margin: 0 10px;
+}
+
+.profit {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    text-align: center;
+}
+
+.analytics {
+    display: flex;
+    transform: rotate(180deg);
+}
+
+.analytics__item {
+    background-color: #fff;
+    width: 10px;
+    margin-right: 5px;
+}
+
+.analytics__item_3 {
+    height: 10px;
+}
+
+.analytics__item_2 {
+    height: 25px;
+}
+
+.analytics__item_1 {
+    height: 40px;
+}
+
+.offer {
+    display: flex;
+    justify-content: space-around;
+    color: #000;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 30px;
+        background: rgba(255, 255, 255);
     }
 }
 
 
 @media screen and (max-width: 1024px){
-    .introduce {
+    .text {
+        align-items: center;
+        flex-direction: column;
+
         &__description {
-            width: 100%;
-            align-items: center;
-            flex-direction: column;
+            margin-bottom: 30px;
         }
     }
 }

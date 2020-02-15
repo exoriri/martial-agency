@@ -63,8 +63,8 @@ gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', () => {
 
     gulp.watch('src/css/**/*.css', gulp.series('css'));
     gulp.watch('src/views/**/*.pug', gulp.series('pug'));
-    gulp.watch('src/fonts/**/*', gulp.series('images'));
-    gulp.watch('src/views/**/*', gulp.series('fonts'));
+    gulp.watch('src/images/**/*', gulp.series('images'));
+    gulp.watch('src/fonts/**/*', gulp.series('fonts'));
     gulp.watch('./dest/**/*').on('change', browserSync.reload);
 }));
 

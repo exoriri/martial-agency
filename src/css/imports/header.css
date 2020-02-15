@@ -5,12 +5,12 @@
     justify-content: space-between;
     flex-wrap: wrap;
     font-weight: 300;
-    padding-bottom: 20px;
+    padding: 20px;
 
     &__link {
         color: #000;
         text-decoration: none;
-        transition: 0.2s;
+        transition: padding 0.2s;
 
         &:hover {
             padding: 0 5px;
