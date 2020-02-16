@@ -22,6 +22,18 @@
     height: 36px;
 }
 
+.spanners {
+    background: url(../../images/spanners.svg) no-repeat;
+    width: 36px;
+    height: 36px; 
+}
+
+.result {
+    background: url(../../images/result.svg) no-repeat;
+    width: 36px;
+    height: 36px; 
+}
+
 .inversed {
     filter: invert(1);
 }
