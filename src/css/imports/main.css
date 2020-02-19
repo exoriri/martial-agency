@@ -1,7 +1,7 @@
 @import 'animations.css';
 
 .introduce {
-    background: url('../../images/agenct.jpg') center no-repeat;
+    background: url(../images/agenct.jpg) center no-repeat;
     background-size: cover;
     color: #fff;
     font-family: 'Nunito-Regular';

@@ -1,35 +1,35 @@
 .gear {
-    background: url(../../images/gear.svg) no-repeat;
+    background: url(../images/gear.svg) no-repeat;
     width: 36px;
     height: 36px;
 }
 
 .clock {
-    background: url(../../images/clock.svg) no-repeat;
+    background: url(../images/clock.svg) no-repeat;
     width: 36px;
     height: 36px;
 }
 
 .lighted-arrow-up {
-    background: url(../../images/lighted-arrow-up.svg) no-repeat;
+    background: url(../images/lighted-arrow-up.svg) no-repeat;
     width: 36px;
     height: 36px;
 }
 
 .money-bag {
-    background: url(../../images/money-bag.svg) no-repeat;
+    background: url(../images/money-bag.svg) no-repeat;
     width: 36px;
     height: 36px;
 }
 
 .spanners {
-    background: url(../../images/spanners.svg) no-repeat;
+    background: url(../images/spanners.svg) no-repeat;
     width: 36px;
     height: 36px; 
 }
 
 .result {
-    background: url(../../images/result.svg) no-repeat;
+    background: url(../images/result.svg) no-repeat;
     width: 36px;
     height: 36px; 
 }

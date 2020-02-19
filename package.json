@@ -1,10 +1,12 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "martialagency",
   "version": "1.0.0",
-  "description": "Gulp with initial configs for development",
+  "description": "Landing example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -15,11 +17,12 @@
   "bugs": {
     "url": "https://github.com/exoriri/gulp-boilerplate/issues"
   },
-  "homepage": "https://github.com/exoriri/gulp-boilerplate#readme",
+  "homepage": "https://exoriri.github.io/martial-agency",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-postcss": "^8.0.0",

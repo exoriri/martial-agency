@@ -20,18 +20,18 @@ gulp.task('css', () => {
 
     return gulp.src('./src/css/*.css')
         .pipe(postcss(plugins))
-        .pipe(gulp.dest('./dest/css'))
+        .pipe(gulp.dest('./build/css'))
 });
 
 gulp.task('pug', () => {
     return gulp.src('./src/views/*.pug')
         .pipe(pug())
-        .pipe(gulp.dest('./dest/'));
+        .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('fonts', () => {
     return gulp.src('./src/fonts/*')
-        .pipe(gulp.dest('./dest/fonts/'));
+        .pipe(gulp.dest('./build/fonts/'));
 });
 
 gulp.task('images', () => {
@@ -47,17 +47,17 @@ gulp.task('images', () => {
                 ]
             })
         ]))
-        .pipe(gulp.dest('./dest/images'))
+        .pipe(gulp.dest('./build/images'))
 });
 
 gulp.task('filesWatch', (done) => {
-    browserSync.reload('./dest/**/*.html');
+    browserSync.reload('./build/**/*.html');
     done();
 });
 
 gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', () => {
     browserSync.init({
-        server: './dest/',
+        server: './build/',
         port: 3000,
     });
 
@@ -65,7 +65,8 @@ gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', () => {
     gulp.watch('src/views/**/*.pug', gulp.series('pug'));
     gulp.watch('src/images/**/*', gulp.series('images'));
     gulp.watch('src/fonts/**/*', gulp.series('fonts'));
-    gulp.watch('./dest/**/*').on('change', browserSync.reload);
+    gulp.watch('./build/**/*').on('change', browserSync.reload);
 }));
 
+gulp.task('build', gulp.series('pug', 'css', 'images', 'fonts'));
 gulp.task('default', gulp.series('serve'));
