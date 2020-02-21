@@ -45,9 +45,9 @@
 
 .widget-form__header {
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 300px;
-    padding: 5px;
+    padding: 20px 5px;
     background: #396088;
 }
 
@@ -66,6 +66,9 @@
 }
 
 .widget-form__close {
+    position: relative;
+    bottom: 15px;
+    left: 10px;
     color: rgba(0, 0, 0, 0.8);
     margin-left: auto;
     font-size: 15px;
@@ -140,5 +143,15 @@
 
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .widget-form {
+        width: 95%;
+    }
+
+    .widget-form__input {
+        width: 90%;
     }
 }
