@@ -10,6 +10,11 @@ const cssNested = require('postcss-nested');
 const pug = require('gulp-pug');
 const imagemin = require('gulp-imagemin');
 
+gulp.task('libs', () => {
+    return gulp.src('./src/libs/**/*')
+        .pipe(gulp.dest('./build/libs'))
+});
+
 gulp.task('css', () => {
     const plugins = [
         autoprefixer(),
@@ -55,7 +60,7 @@ gulp.task('filesWatch', (done) => {
     done();
 });
 
-gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', () => {
+gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', 'libs', () => {
     browserSync.init({
         server: './build/',
         port: 3000,
@@ -65,8 +70,9 @@ gulp.task('serve', gulp.series('pug', 'css', 'images', 'fonts', () => {
     gulp.watch('src/views/**/*.pug', gulp.series('pug'));
     gulp.watch('src/images/**/*', gulp.series('images'));
     gulp.watch('src/fonts/**/*', gulp.series('fonts'));
+    gulp.watch('src/libs/**/*', gulp.series('libs'));
     gulp.watch('./build/**/*').on('change', browserSync.reload);
 }));
 
-gulp.task('build', gulp.series('pug', 'css', 'images', 'fonts'));
+gulp.task('build', gulp.series('pug', 'css', 'images', 'fonts', 'libs'));
 gulp.task('default', gulp.series('serve'));
